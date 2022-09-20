@@ -11,7 +11,7 @@
 
         <Button Name="btnDoSplit" Content="Split!" FontSize="50" HorizontalAlignment="Left" Margin="93,126,0,0" VerticalAlignment="Top" Click="Button_Click" IsEnabled="False"/>
         <Button Content="Choose text file!" HorizontalAlignment="Left" Margin="106,101,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
-        <TextBox Name="textBox1" HorizontalAlignment="Left" Margin="321,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock Name="textBox1" HorizontalAlignment="Left" Margin="321,101,0,0" TextWrapping="Wrap" Text="File" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
