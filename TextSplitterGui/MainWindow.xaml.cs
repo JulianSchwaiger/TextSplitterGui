@@ -37,13 +37,17 @@ namespace TextSplitterGui
 
             var fullText = reader.ReadToEnd();
             reader.Close();
+
             int count = 1;
-            foreach (var s in fullText.Split(" "))
+            foreach (var s in fullText.AsEnumerable())
             {
-                var writer = File.CreateText($"{desktopPath}{Path.DirectorySeparatorChar}{count}.txt");
-                writer.WriteLine(s);
-                writer.Close();
-                count++;
+                if(!s.Equals(' ')) //Checks for spaces 😐
+                {
+                    var writer = File.CreateText($"{desktopPath}{Path.DirectorySeparatorChar}{count}_{s}🤓.txt");
+                    writer.WriteLine(s);
+                    writer.Close();
+                    count++;
+                }
             }
         }
 
